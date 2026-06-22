@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --root-heading: "Inter", sans-serif;
+  --root-primary-900: #194a8f;
+  --root-primary-700: #1366d9;
+  --root-primary-500: #d9f0ff;
+  --root-primary-100: #d9f0ff;
+  --root-warning: #b73306;
+  --root-notification: #c18100;
+  --root-nunmber-notification: #006251;
+  --root-heading-color: #333333;
+  --root-text: #333333;
+}
+
+body {
+  background-color: #e3e3e3;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  color: var(--root-text);
+}
+
+.login-page-list {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.login-page-list .company-logo {
+  width: 360px;
+  height: 100%;
+}
+.login-page-list .login-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.login-page-list .login-header h2 {
+  /* display: block; */
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--root-heading-color);
+}
+.login-page-list .login-header .welcome {
+  font-size: 1.6rem;
+  /* font-weight: 600; */
+  text-align: center;
+}
+
+.login-page-list .login-card .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.login-page-list .login-form .form-group-name,
+.login-page-list .login-form .form-group-password {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-page-list .place-name,
+.login-page-list .place-pass-word {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--root-text);
+  font-size: 1.4rem;
+}
+.login-page-list .place-name::placeholder,
+.login-page-list .place-pass-word::placeholder {
+  color: #bdbdbd;
+}
+
+.login-page-list .login-options {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+}
+.login-page-list .login-options .checkbox {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+}
+.login-page-list .remember,
+.login-page-list .forgot-password {
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--root-text);
+}
+.login-page-list .forgot-password:hover {
+  color: var(--root-primary-700);
+}
+.login-page-list .sign-in {
+  color: #f7f7f7;
+  background-color: var(--root-primary-700);
+  border-radius: 10px;
+  padding: 10px 18px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.login-page-list .sign-in:hover {
+  background-color: var(--root-primary-900);
+}
+@media (max-width: 768px) {
+  .login-page-list {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .login-page-list .company-logo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+}

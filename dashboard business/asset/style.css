@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --root-background: #e3e3e3;
+  --root-heading: "Inter", sans-serif;
+  --root-primary-900: #194a8f;
+  --root-primary-700: #1366d9;
+  --root-primary-500: #d9f0ff;
+  --root-primary-100: #d9f0ff;
+  --root-warning: #b73306;
+  --root-notification: #c18100;
+  --root-number-notification: #006251;
+  --root-neutral-950: #333333;
+  --root-neutral-900: #585858;
+  --root-neutral-800: #6a6a6a;
+  --root-neutral-700: #818181;
+  --root-neutral-600: #969696;
+  --root-neutral-500: #aaaaaa;
+  --root-neutral-400: #bdbdbd;
+  --root-neutral-300: #d1d1d1;
+  --root-neutral-200: #e3e3e3;
+  --root-neutral-100: #f0f0f0;
+  --root-neutral-50: #f7f7f7;
+}
+body {
+  background-color: var(--root-background);
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  color: var(--root-neutral-950);
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.dashboard {
+  padding: 0;
+  width: 100%;
+}
+.dashboard-page {
+  display: flex;
+  /* flex-direction: row; */
+  width: 100%;
+  min-height: 100vh;
+}
+/* khối sidebar */
+.sidebar {
+  min-width: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--root-neutral-600);
+  padding: 32px 16px;
+}
+.sidebar .company-logo {
+  width: 60px;
+}
+.sidebar .menu .item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--root-neutral-50);
+}
+.sidebar .menu .item :hover {
+  color: var(--root-neutral-900);
+}
+.sidebar .menu .home.active {
+  color: var(--root-neutral-950);
+}
+.sidebar .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+/* khối section dashboard */
+.section-dashboard {
+  width: 200px;
+  min-height: 100vh;
+  padding: 40px 42px;
+  background-color: var(--root-neutral-100);
+}
+.section-dashboard .container-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.section-dashboard .nav-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.section-dashboard .nav-dashboard .the {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--root-neutral-950);
+  padding: 8px 16px;
+}
+
+.section-dashboard .nav-dashboard .the:hover {
+  color: var(--root-neutral-100);
+  background-color: var(--root-neutral-900);
+  border-radius: 10px;
+}
+
+.section-dashboard .nav-dashboard .the.active {
+  color: var(--root-neutral-100);
+  background-color: var(--root-neutral-950);
+  border-radius: 10px;
+}
+
+/* khối metrics */
+.metrics {
+  width: 100%;
+  padding: 32px 16px;
+  background-color: var(--root-neutral-50);
+}
+.metrics .breadcrum {
+  display: flex;
+  align-items: center;
+  color: var(--root-neutral-950);
+  background-color: var(--root-primary-100);
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 24px;
+}
+.metrics .date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--root-primary-100);
+  border-radius: 10px;
+  padding: 8px;
+}
+.metrics .date h1 {
+  font-size: 4.6rem;
+  font-weight: 500;
+}
+.metrics .date .btn-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4px;
+  background: none;
+  border: 1px solid var(--root-neutral-950);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.metrics .btn-group {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0;
+}
+.metrics .btn-stock {
+  background: none;
+  border: 1px solid var(--root-neutral-200);
+  border-radius: 10px;
+  padding: 8px 16px;
+  min-width: 120px;
+}
+.metrics .btn-business.active {
+  background-color: var(--root-neutral-800);
+  color: var(--root-neutral-100);
+  border-radius: 10px;
+  padding: 8px 16px;
+  min-width: 120px;
+  border: none;
+}
+
+.metrics .btn-stock:hover {
+  background-color: var(--root-neutral-200);
+}
+.metrics .section-metric {
+  display: flex;
+  margin-top: 24px;
+  gap: 24px;
+  background-color: var(--root-neutral-100);
+  border-radius: 10px;
+  padding: 8px;
+  justify-content: flex-start;
+}
+.metrics .revenue-name,
+.Cost-name,
+.Profit-name,
+.Order-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.metrics .revenue-metric {
+  color: var(--root-primary-900);
+}
+.metrics .Cost-metric {
+  color: var(--root-warning);
+}
+.metrics .Profit-metric {
+  color: var(--root-number-notification);
+}
+.metrics .section-chart,
+.section-chart-2 {
+  margin-top: 24px;
+}
+.metrics .container-chart,
+.container-chart-2 {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.metrics .section-chart img,
+.section-chart-2 img {
+  width: 432px;
+  border-radius: 10px;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+
+    <!-- Reset and base styles -->
+    <link rel="stylesheet" href="./assets/reset.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main class="login-page" aria-label="Login page">
+      <div class="login-page-list">
+        <!-- Logo -->
+        <img
+          src="./assets/img/lo-ci.png"
+          alt="Company Logo"
+          class="company-logo"
+        />
+        <!-- Login Card -->
+        <section class="login-card">
+          <header class="login-header">
+            <h2>Log in to your account</h2>
+            <p class="welcome">Welcome back! Please enter your details.</p>
+          </header>
+
+          <!-- Login Form -->
+          <form
+            class="login-form"
+            action="./dashboard.html"
+            method="post"
+            novalidate
+          >
+            <!-- Username -->
+            <div class="form-group-name">
+              <label for="username">User Name</label>
+              <input
+                id="username"
+                type="text"
+                name="username"
+                placeholder="User Name"
+                class="place-name"
+                autocomplete="username"
+                spellcheck="false"
+                required
+              />
+            </div>
+
+            <!-- Password -->
+            <div class="form-group-password">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                class="place-pass-word"
+                autocomplete="current-password"
+                spellcheck="false"
+                required
+                minlength="6"
+              />
+            </div>
+
+            <!-- Options -->
+            <div class="login-options">
+              <div class="checkbox">
+                <input type="checkbox" id="remember" name="remember" />
+                <label for="remember" class="remember"
+                  >Remember for 30 days</label
+                >
+              </div>
+              <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="sign-in">Sign in</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
