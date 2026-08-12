@@ -3,28 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./asset/reset.css" />
+    <link rel="stylesheet" href="../css/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./asset/style.css" />
-
-    <title>stock</title>
+    <link rel="stylesheet" href="../css/customers.css" />
+    <title>Customer</title>
   </head>
-  <body class="dashboard">
-    <div class="dashboard-page">
-      <!-- phần sidebar -->
+  <body class="customer">
+    <div class="container-customer">
+      <!-- khối sidebar -->
       <aside class="sidebar">
-        <img
-          class="company-logo"
-          src="./asset/img/lo-ci.png"
-          alt="company logo"
-        />
-        <nav class="menu">
-          <a href="./dashboard-business" class="item home active">
+        <img class="company-logo" src="../asset/lo-ci.png" alt="company logo" />
+        <nav class="menu" aria-label="Sidebar navigation">
+          <a href="./dashboard.html" class="item home active">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -40,7 +35,7 @@
             </svg>
           </a>
 
-          <a href="./stock-dalat/screwcap/1" class="item stock">
+          <a href="../page/dashboard-stock.html" class="item stock">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -75,12 +70,15 @@
           class="avatar"
         />
       </aside>
-      <!-- khối dashboard section -->
+      <!-- khối dashboard -->
       <main class="section-dashboard">
         <div class="container-dashboard">
           <h3>Dashboard</h3>
-          <nav class="nav-dashboard">
-            <a href="#" class="the overview active">
+          <nav class="nav-dashboard" aria-label="Dashboard navigation">
+            <a
+              href="../page/dashboard.html"
+              class="the overview"
+            >
               <div class="icon-dashboard">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +94,11 @@
               </div>
               <span class="title">Overview</span>
             </a>
-            <a href="#" class="the customer">
+            <a
+              href="./customers.html"
+              class="the customer active"
+              aria-current="page"
+            >
               <div class="icon-dashboard">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +114,7 @@
               </div>
               <span class="title">Customer</span>
             </a>
-            <a href="#" class="the revenue">
+            <a href="./revenue.html" class="the revenue">
               <div class="icon-dashboard">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -147,8 +149,8 @@
           </nav>
         </div>
       </main>
-      <!-- khối metrics -->
-      <div class="metrics">
+
+      <section class="metrics">
         <div class="container-metrics">
           <nav class="breadcrum" aria-label="Breadcrumb">
             <div class="icon">
@@ -192,133 +194,199 @@
                 ></path>
               </svg>
             </div>
-            <span>Overview</span>
+            <span class="text-customer">Customer</span>
           </nav>
+
           <div class="date">
-            <h1>Overview</h1>
-            <button class="btn btn-date">
-              <div class="icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
+            <h1>Customer</h1>
+            <div class="group-btn">
+              <button type="button" class="btn report">Report</button>
+              <input
+                class="btn btn-date"
+                type="date"
+                aria-label="Select date"
+              />
+            </div>
+          </div>
+
+          <div class="info-panel">
+            <div class="dropdown-group">
+              <div class="dropdown status">
+                <label for="filter-status">Status</label>
+                <select id="filter-status" class="select-box" name="status">
+                  <option value="">All</option>
+                  <option value="Paid a half">Paid a half</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Not yet">Not yet</option>
+                </select>
+              </div>
+              <div class="dropdown payment">
+                <label for="filter-payment">Payment</label>
+                <select id="filter-payment" class="select-box" name="payment">
+                  <option value="">All</option>
+                  <option value="Cash">Cash</option>
+                  <option value="Bank">Bank</option>
+                </select>
+              </div>
+              <div class="dropdown location">
+                <label for="filter-location">Location</label>
+                <select id="filter-location" class="select-box" name="location">
+                  <option value="">All</option>
+                  <option value="Hochiminh">Hochiminh</option>
+                  <option value="Hanoi">Hanoi</option>
+                  <option value="Nha Trang">Nha Trang</option>
+                  <option value="Hoi An">Hoi An</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="search-box">
+              <label class="visually-hidden" for="customer-search"
+                >Search customers</label
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input
+                id="customer-search"
+                class="search-input"
+                type="search"
+                name="search"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="info-customer">
+              <thead>
+                <tr>
+                  <th scope="col">DO</th>
+                  <th scope="col">Customer</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Volume</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price/Unit</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">
+                    <span class="visually-hidden">Actions</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="customer-table"></tbody>
+            </table>
+          </div>
+
+          <button
+            type="button"
+            class="btn-add"
+            id="open-customer-modal"
+            aria-label="Add customer"
+          >
+            <img src="../asset/svg/Subtract.svg" alt="" />
+          </button>
+
+          <div
+            class="modal-overlay hidden"
+            id="customer-modal"
+            hidden
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <div class="modal">
+              <h2 id="modal-title" class="modal-title">Add customer</h2>
+              <form class="modal-content" id="customer-form" novalidate>
+                <div class="row-1">
+                  <div class="cus">
+                    <label for="modal-customer">Customer</label>
+                    <input
+                      id="modal-customer"
+                      type="text"
+                      name="customer"
+                      placeholder="Customer"
+                      required
+                    />
+                  </div>
+                  <div class="address">
+                    <label for="modal-address">Address</label>
+                    <input
+                      id="modal-address"
+                      type="text"
+                      name="address"
+                      placeholder="Address"
+                    />
+                  </div>
+                </div>
+                <div class="row-2">
+                  <div class="phone">
+                    <label for="modal-phone">Mobile phone</label>
+                    <input
+                      id="modal-phone"
+                      type="tel"
+                      name="phone"
+                      placeholder="Mobile phone"
+                    />
+                  </div>
+                  <div class="product">
+                    <label for="modal-product">Product</label>
+                    <input
+                      id="modal-product"
+                      type="text"
+                      name="product"
+                      placeholder="Product"
+                    />
+                  </div>
+                </div>
+                <div class="quantity-field">
+                  <label for="modal-quantity">Quantity</label>
+                  <input
+                    id="modal-quantity"
+                    type="number"
+                    name="quantity"
+                    placeholder="Quantity"
+                    min="1"
+                  />
+                </div>
+              </form>
+              <div class="modal-actions">
+                <button
+                  type="submit"
+                  form="customer-form"
+                  class="btn save-btn"
+                  id="save-customer"
                 >
-                  <path
-                    d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM84,184a12,12,0,1,1,12-12A12,12,0,0,1,84,184Zm44,0a12,12,0,1,1,12-12A12,12,0,0,1,128,184Zm0-40a12,12,0,1,1,12-12A12,12,0,0,1,128,144Zm44,40a12,12,0,1,1,12-12A12,12,0,0,1,172,184Zm0-40a12,12,0,1,1,12-12A12,12,0,0,1,172,144Zm36-64H48V48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24Z"
-                  ></path>
-                </svg>
+                  Save and Close
+                </button>
+                <button
+                  type="button"
+                  class="btn cancel-btn"
+                  id="cancel-customer"
+                >
+                  Cancel
+                </button>
               </div>
-              <span>Mar 01st, 2026</span>
-            </button>
-          </div>
-          <div class="btn-group">
-            <form class="business" action="#" method="get" novalidate>
-              <button class="btn btn-business active">Business</button>
-            </form>
-            <form
-              class="stock"
-              action="./dashboard overview stock.html"
-              method="get"
-              novalidate
-            >
-              <button class="btn btn-stock">Stock</button>
-            </form>
-          </div>
-          <div class="section-metric">
-            <div class="revenue-metric">
-              <div class="revenue-name">
-                <div class="svg-revenue">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M160,152a16,16,0,0,1-16,16h-8V136h8A16,16,0,0,1,160,152Zm72-24A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-56,24a32,32,0,0,0-32-32h-8V88h4a16,16,0,0,1,16,16,8,8,0,0,0,16,0,32,32,0,0,0-32-32h-4V64a8,8,0,0,0-16,0v8h-4a32,32,0,0,0,0,64h4v32h-8a16,16,0,0,1-16-16,8,8,0,0,0-16,0,32,32,0,0,0,32,32h8v8a8,8,0,0,0,16,0v-8h8A32,32,0,0,0,176,152Zm-76-48a16,16,0,0,0,16,16h4V88h-4A16,16,0,0,0,100,104Z"
-                    ></path>
-                  </svg>
-                </div>
-                <span>Revenue (Million)</span>
-              </div>
-              <h3>VND569.6</h3>
-            </div>
-            <div class="Cost-metric">
-              <div class="Cost-name">
-                <div class="svg-cost">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor
-                  "
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM136,176H120a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm64,0H168a8,8,0,0,1,0-16h32a8,8,0,0,1,0,16ZM32,88V64H224V88Z"
-                    ></path>
-                  </svg>
-                </div>
-                <span>Cost (Million)</span>
-              </div>
-              <h3>VND345.9</h3>
-            </div>
-            <div class="Profit-metric">
-              <div class="Profit-name">
-                <div class="svg-profit">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM56,146.87C36.41,141.4,24,132.39,24,124V109.93c8.16,5.78,19.09,10.44,32,13.57Zm80-23.37c12.91-3.13,23.84-7.79,32-13.57V124c0,8.39-12.41,17.4-32,22.87Zm-16,71.37C100.41,189.4,88,180.39,88,172v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41Zm0-44.62A163,163,0,0,1,96,152a163,163,0,0,1-24-1.75V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54Zm64,48a165.45,165.45,0,0,1-48,0V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54ZM232,172c0,8.39-12.41,17.4-32,22.87V171.5c12.91-3.13,23.84-7.79,32-13.57Z"
-                    ></path>
-                  </svg>
-                </div>
-                <span>Profit (Million)</span>
-              </div>
-              <h3>VND 120.4</h3>
-            </div>
-            <div class="Order-metric">
-              <div class="Order-name">
-                <div class="svg-order">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Z"
-                    ></path>
-                  </svg>
-                </div>
-                <span>Order</span>
-              </div>
-              <h3>3 400</h3>
             </div>
           </div>
-          <div class="section-chart">
-            <div class="container-chart">
-              <img src="./asset/img/Image 1.jpg" alt="chart 1" />
-              <img src="./asset/img/Image 1.jpg" alt="chart 2" />
-            </div>
-          </div>
-          <div class="section-chart-2">
-            <div class="container-chart-2">
-              <img src="./asset/img/BarLineChart.jpg" alt="Quantity" />
-              <img src="./asset/img/Charts.jpg" alt="location" />
-            </div>
+
+          <div class="total">
+            <span>Total:</span>
+            <span id="customer-total">0 VND</span>
           </div>
         </div>
-      </div>
+      </section>
     </div>
+    <script src="../js/customers.js"></script>
   </body>
 </html>

@@ -35,7 +35,7 @@ body {
 }
 .login-page-list .company-logo {
   width: 360px;
-  height: 100%;
+  height: auto;
 }
 .login-page-list .login-header {
   display: flex;

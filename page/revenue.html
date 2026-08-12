@@ -3,27 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./custom css/resetcustom.css" />
+    <link rel="stylesheet" href="../css/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./custom css/stylecustom.css" />
+    <link rel="stylesheet" href="../css/revenue.css" />
     <title>Customer</title>
   </head>
   <body class="customer">
     <div class="container-customer">
+      <!-- khối sidebar -->
       <aside class="sidebar">
         <div class="main-content">
-          <img
-            src="./custom css/img/lo-ci.png"
-            class="company-logo"
-            alt="company logo"
-          />
+          <img src="../asset/lo-ci.png" alt="company logo" />
           <nav class="menu" aria-label="Main navigation">
-            <a href="../dashboard.html" class="item-home-active" aria-label="Home">
+            <a
+              href="./dashboard.html"
+              class="item-home-active"
+              aria-label="Home"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -38,7 +39,7 @@
               </svg>
             </a>
             <a
-              href="../dashboard overview stock.html"
+              href="./dashboard-stock.html"
               class="item-stock"
               aria-label="Stock"
             >
@@ -84,7 +85,7 @@
         <div class="main-content">
           <h3>Dashboard</h3>
           <nav class="nav-dashboard" aria-label="Dashboard navigation">
-            <a href="../dashboard.html">
+            <a href="./dashboard.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -98,7 +99,7 @@
               </svg>
               <span class="title">Overview</span>
             </a>
-            <a href="./custom.html" class="active" aria-current="page">
+            <a href="./customers.html" aria-current="page">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -112,7 +113,7 @@
               </svg>
               <span class="title">Customer</span>
             </a>
-            <a href="#">
+            <a href="./revenue.html" class="active" aria-current="page">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -185,11 +186,11 @@
                 d="M228,128a12,12,0,0,1-6.86,10.84l-152,72a12,12,0,0,1-10.27-21.69L188,128,58.87,66.85A12,12,0,0,1,69.14,45.16l152,72A12,12,0,0,1,228,128Z"
               ></path>
             </svg>
-            <span><strong>Customer</strong></span>
+            <span><strong>Revenue</strong></span>
           </nav>
 
           <div class="date">
-            <h1>Customer</h1>
+            <h1>Revenue</h1>
             <div class="group-btn">
               <button type="button" class="btn report">Report</button>
               <button type="button" class="btn date-btn">
@@ -213,32 +214,20 @@
           <div class="info-panel">
             <div class="dropdown-group">
               <div class="dropdown status">
-                <label for="filter-status">Status</label>
-                <select id="filter-status" class="select-box" name="status">
-                  <option>Paid a half</option>
-                  <option>Paid</option>
-                  <option>Not yet</option>
-                </select>
-              </div>
-              <div class="dropdown payment">
-                <label for="filter-payment">Payment</label>
-                <select id="filter-payment" class="select-box" name="payment">
-                  <option>Cash</option>
-                  <option>Bank</option>
-                </select>
-              </div>
-              <div class="dropdown location">
                 <label for="filter-location">Location</label>
                 <select id="filter-location" class="select-box" name="location">
-                  <option>Da lat</option>
-                  <option>Ho Chi Minh</option>
-                  <option>Nha Trang</option>
+                  <option value="">All</option>
+                  <option value="Da Lat">Da Lat</option>
+                  <option value="Ho Chi Minh">Ho Chi Minh</option>
+                  <option value="Nha Trang">Nha Trang</option>
                 </select>
               </div>
             </div>
 
             <div class="search-box">
-              <label class="visually-hidden" for="customer-search">Search customers</label>
+              <label class="visually-hidden" for="revenue-search"
+                >Search Revenue</label
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -253,7 +242,7 @@
                 <path d="m21 21-4.35-4.35"></path>
               </svg>
               <input
-                id="customer-search"
+                id="revenue-search"
                 class="search-input"
                 type="search"
                 name="search"
@@ -263,113 +252,97 @@
           </div>
 
           <div class="table-wrapper">
-            <table class="info-customer">
+            <table class="info-revenue">
               <thead>
                 <tr>
-                  <th scope="col">DO</th>
-                  <th scope="col">Customer</th>
                   <th scope="col">Product</th>
                   <th scope="col">Volume</th>
                   <th scope="col">Type</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Price/Unit</th>
                   <th scope="col">Total</th>
-                  <th scope="col"><span class="visually-hidden">Actions</span></th>
+                  <th scope="col">Image</th>
+                  <th scope="col">
+                    <span class="visually-hidden">Actions</span>
+                  </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>040426-01</td>
-                  <td>Ler Jardin</td>
-                  <td>Colina</td>
-                  <td>0.75</td>
-                  <td>Red</td>
-                  <td>35</td>
-                  <td>170,000</td>
-                  <td>5,950,000</td>
-                  <td>...</td>
-                </tr>
-              </tbody>
+              <tbody id="revenue-table"></tbody>
             </table>
           </div>
 
           <button
             type="button"
             class="btn-add"
-            id="open-customer-modal"
-            aria-label="Add customer"
+            id="open-revenue-modal"
+            aria-label="Add revenue"
           >
-            <img src="./custom css/img/Subtract.svg" alt="" />
+            <img src="../asset/svg/Subtract.svg" alt="" />
           </button>
 
           <div
             class="modal-overlay hidden"
-            id="customer-modal"
+            id="revenue-modal"
             hidden
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
             <div class="modal">
-              <h2 id="modal-title" class="modal-title">Add customer</h2>
-              <form class="modal-content" id="customer-form" novalidate>
+              <h2 id="modal-title" class="modal-title">Add Revenue</h2>
+              <form class="modal-content" id="revenue-form" novalidate>
                 <div class="row-1">
                   <div class="cus">
-                    <label for="modal-customer">Customer</label>
+                    <label for="modal-revenue">Product</label>
                     <input
-                      id="modal-customer"
+                      id="modal-revenue"
                       type="text"
-                      name="customer"
-                      placeholder="Customer"
+                      name="Product"
+                      placeholder="Product"
                       required
                     />
                   </div>
                   <div class="address">
-                    <label for="modal-address">Address</label>
+                    <label for="modal-address">Volume</label>
                     <input
                       id="modal-address"
                       type="text"
-                      name="address"
-                      placeholder="Address"
+                      name="volume"
+                      placeholder="Volume"
                     />
                   </div>
                 </div>
                 <div class="row-2">
-                  <div class="phone">
-                    <label for="modal-phone">Mobile phone</label>
+                  <div class="quantity-field">
+                    <label for="modal-quantity">Quantity</label>
                     <input
-                      id="modal-phone"
-                      type="tel"
-                      name="phone"
-                      placeholder="Mobile phone"
+                      id="modal-quantity"
+                      type="number"
+                      name="quantity"
+                      placeholder="Quantity"
+                      min="1"
                     />
                   </div>
                   <div class="product">
-                    <label for="modal-product">Product</label>
+                    <label for="modal-product">Type</label>
                     <input
                       id="modal-product"
                       type="text"
-                      name="product"
-                      placeholder="Product"
+                      name="type"
+                      placeholder="Type"
                     />
                   </div>
                 </div>
-                <div class="quantity-field">
-                  <label for="modal-quantity">Quantity</label>
-                  <input
-                    id="modal-quantity"
-                    type="number"
-                    name="quantity"
-                    placeholder="Quantity"
-                    min="1"
-                  />
-                </div>
               </form>
               <div class="modal-actions">
-                <button type="button" class="btn save-btn" id="save-customer">
+                <button type="button" class="btn save-btn" id="save-revenue">
                   Save and Close
                 </button>
-                <button type="button" class="btn cancel-btn" id="cancel-customer">
+                <button
+                  type="button"
+                  class="btn cancel-btn"
+                  id="cancel-revenue"
+                >
                   Cancel
                 </button>
               </div>
@@ -383,18 +356,19 @@
         </div>
       </section>
     </div>
+    <script src="../js/revenue.js"></script>
     <script>
       (function () {
-        var overlay = document.getElementById("customer-modal");
-        var openBtn = document.getElementById("open-customer-modal");
-        var saveBtn = document.getElementById("save-customer");
-        var cancelBtn = document.getElementById("cancel-customer");
-        var form = document.getElementById("customer-form");
+        var overlay = document.getElementById("revenue-modal");
+        var openBtn = document.getElementById("open-revenue-modal");
+        var saveBtn = document.getElementById("save-revenue");
+        var cancelBtn = document.getElementById("cancel-revenue");
+        var form = document.getElementById("revenue-form");
 
         function openModal() {
           overlay.classList.remove("hidden");
           overlay.removeAttribute("hidden");
-          document.getElementById("modal-customer").focus();
+          document.getElementById("modal-revenue").focus();
         }
 
         function closeModal() {

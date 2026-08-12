@@ -137,10 +137,72 @@ h3 {
 }
 /* khối metrics */
 .metrics {
+  flex: 1;
+  min-width: 0;
   width: 100%;
   min-height: 100vh;
   padding: 32px 16px;
   background-color: var(--root-neutral-50);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-page {
+    flex-wrap: wrap;
+  }
+
+  .sidebar,
+  .section-dashboard,
+  .metrics {
+    width: 100%;
+  }
+
+  .sidebar,
+  .section-dashboard {
+    min-height: auto;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+
+  .sidebar .menu {
+    flex-direction: row;
+    width: auto;
+    gap: 16px;
+  }
+
+  .section-dashboard {
+    padding: 24px;
+  }
+
+  .section-dashboard .container-dashboard,
+  .section-dashboard .nav-dashboard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .section-dashboard .container-dashboard {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-dashboard .nav-dashboard {
+    width: 100%;
+  }
+
+  .section-dashboard .nav-dashboard .the {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar,
+  .section-dashboard {
+    padding-inline: 16px;
+  }
 }
 .metrics .breadcrumb {
   display: flex;
@@ -272,8 +334,8 @@ td {
   }
 
   .metrics .review-stock .chart-stock {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
   }
 
   .metrics .review-stock .image,
@@ -286,5 +348,11 @@ td {
   .metrics .khoi {
     padding-inline: 16px;
     overflow-x: auto;
+  }
+
+  .metrics .review-stock img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
