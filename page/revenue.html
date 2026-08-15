@@ -11,24 +11,146 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/revenue.css" />
-    <title>Customer</title>
+    <title>Revenue</title>
   </head>
   <body class="customer">
     <div class="container-customer">
       <!-- khối sidebar -->
       <aside class="sidebar">
-        <div class="main-content">
-          <img src="../asset/lo-ci.png" alt="company logo" />
-          <nav class="menu" aria-label="Main navigation">
-            <a
-              href="./dashboard.html"
-              class="item-home-active"
-              aria-label="Home"
+        <img class="company-logo" src="../asset/lo-ci.png" alt="company logo" />
+        <nav class="menu" aria-label="Sidebar navigation">
+          <a href="./dashboard.html" class="item home active" aria-label="Dashboard home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              fill="currentColor
+                "
+              viewBox="0 0 256 256"
+              class="svg svg-home"
             >
+              <path
+                d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z"
+              ></path>
+            </svg>
+          </a>
+
+          <a href="../page/dashboard-stock.html" class="item stock" aria-label="Stock overview">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              class="svg svg-box"
+            >
+              <path
+                d="M224,48H32A16,16,0,0,0,16,64V88a16,16,0,0,0,16,16v88a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V104a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm-72,96H104a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm72-56H32V64H224V88Z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="item setting" aria-label="Settings">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              class="svg svg-setting"
+            >
+              <path
+                d="M216,130.16q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.6,107.6,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.29,107.29,0,0,0-26.25-10.86,8,8,0,0,0-7.06,1.48L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.6,107.6,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z"
+              ></path>
+            </svg>
+          </a>
+        </nav>
+        <img
+          src="https://framerusercontent.com/images/SSD83oRH9jI2CCmj1s9r1Hspm6s.jpg"
+          alt="user avatar"
+          class="avatar"
+        />
+      </aside>
+      <!-- khối dashboard -->
+      <main class="section-dashboard">
+        <div class="container-dashboard">
+          <h3>Dashboard</h3>
+          <nav class="nav-dashboard" aria-label="Dashboard navigation">
+            <a href="../page/dashboard.html" class="the overview">
+              <div class="icon-dashboard">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16h8V136a8,8,0,0,1,8-8H72a8,8,0,0,1,8,8v64H96V88a8,8,0,0,1,8-8h32a8,8,0,0,1,8,8V200h16V40a8,8,0,0,1,8-8h40a8,8,0,0,1,8,8V200h8A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="title">Overview</span>
+            </a>
+            <a href="./customers.html" class="the customer">
+              <div class="icon-dashboard">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M64.12,147.8a4,4,0,0,1-4,4.2H16a8,8,0,0,1-7.8-6.17,8.35,8.35,0,0,1,1.62-6.93A67.79,67.79,0,0,1,37,117.51a40,40,0,1,1,66.46-35.8,3.94,3.94,0,0,1-2.27,4.18A64.08,64.08,0,0,0,64,144C64,145.28,64,146.54,64.12,147.8Zm182-8.91A67.76,67.76,0,0,0,219,117.51a40,40,0,1,0-66.46-35.8,3.94,3.94,0,0,0,2.27,4.18A64.08,64.08,0,0,1,192,144c0,1.28,0,2.54-.12,3.8a4,4,0,0,0,4,4.2H240a8,8,0,0,0,7.8-6.17A8.33,8.33,0,0,0,246.17,138.89Zm-89,43.18a48,48,0,1,0-58.37,0A72.13,72.13,0,0,0,65.07,212,8,8,0,0,0,72,224H184a8,8,0,0,0,6.93-12A72.15,72.15,0,0,0,157.19,182.07Z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="title">Customer</span>
+            </a>
+            <a href="./revenue.html" class="the revenue active" aria-current="page">
+              <div class="icon-dashboard">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M160,152a16,16,0,0,1-16,16h-8V136h8A16,16,0,0,1,160,152Zm72-24A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-56,24a32,32,0,0,0-32-32h-8V88h4a16,16,0,0,1,16,16,8,8,0,0,0,16,0,32,32,0,0,0-32-32h-4V64a8,8,0,0,0-16,0v8h-4a32,32,0,0,0,0,64h4v32h-8a16,16,0,0,1-16-16,8,8,0,0,0-16,0,32,32,0,0,0,32,32h8v8a8,8,0,0,0,16,0v-8h8A32,32,0,0,0,176,152Zm-76-48a16,16,0,0,0,16,16h4V88h-4A16,16,0,0,0,100,104Z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="title">Revenue</span>
+            </a>
+            <a href="#" class="the pricelist">
+              <div class="icon-dashboard">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M208,32H184V24a8,8,0,0,0-16,0v8H136V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48a8,8,0,0,0-8,8V200a32,32,0,0,0,32,32H184a32,32,0,0,0,32-32V40A8,8,0,0,0,208,32ZM120,56a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0ZM80,72a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0v8A8,8,0,0,1,80,72Zm80,96H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm24-72a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0Z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="title">Pricelist</span>
+            </a>
+          </nav>
+        </div>
+      </main>
+
+      <section class="metrics">
+        <div class="container-metrics">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
+                width="18"
+                height="18"
                 fill="currentColor"
                 viewBox="0 0 256 256"
                 class="svg svg-home"
@@ -37,191 +159,58 @@
                   d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z"
                 ></path>
               </svg>
-            </a>
-            <a
-              href="./dashboard-stock.html"
-              class="item-stock"
-              aria-label="Stock"
-            >
+            </div>
+            <div class="icon-row">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-                class="svg svg-box"
-              >
-                <path
-                  d="M224,48H32A16,16,0,0,0,16,64V88a16,16,0,0,0,16,16v88a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V104a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm-72,96H104a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm72-56H32V64H224V88Z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" class="item-setting" aria-label="Settings">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-                class="svg svg-setting"
-              >
-                <path
-                  d="M216,130.16q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.6,107.6,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.29,107.29,0,0,0-26.25-10.86,8,8,0,0,0-7.06,1.48L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.6,107.6,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z"
-                ></path>
-              </svg>
-            </a>
-          </nav>
-          <div class="account">
-            <img
-              src="https://framerusercontent.com/images/SSD83oRH9jI2CCmj1s9r1Hspm6s.jpg"
-              alt="user avatar"
-              class="avatar"
-            />
-          </div>
-        </div>
-      </aside>
-
-      <main class="section-dashboard">
-        <div class="main-content">
-          <h3>Dashboard</h3>
-          <nav class="nav-dashboard" aria-label="Dashboard navigation">
-            <a href="./dashboard.html">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="18"
+                height="18"
                 fill="currentColor"
                 viewBox="0 0 256 256"
               >
                 <path
-                  d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16h8V136a8,8,0,0,1,8-8H72a8,8,0,0,1,8,8v64H96V88a8,8,0,0,1,8-8h32a8,8,0,0,1,8,8V200h16V40a8,8,0,0,1,8-8h40a8,8,0,0,1,8,8V200h8A8,8,0,0,1,232,208Z"
+                  d="M228,128a12,12,0,0,1-6.86,10.84l-152,72a12,12,0,0,1-10.27-21.69L188,128,58.87,66.85A12,12,0,0,1,69.14,45.16l152,72A12,12,0,0,1,228,128Z"
                 ></path>
               </svg>
-              <span class="title">Overview</span>
-            </a>
-            <a href="./customers.html" aria-current="page">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M64.12,147.8a4,4,0,0,1-4,4.2H16a8,8,0,0,1-7.8-6.17,8.35,8.35,0,0,1,1.62-6.93A67.79,67.79,0,0,1,37,117.51a40,40,0,1,1,66.46-35.8,3.94,3.94,0,0,1-2.27,4.18A64.08,64.08,0,0,0,64,144C64,145.28,64,146.54,64.12,147.8Zm182-8.91A67.76,67.76,0,0,0,219,117.51a40,40,0,1,0-66.46-35.8,3.94,3.94,0,0,0,2.27,4.18A64.08,64.08,0,0,1,192,144c0,1.28,0,2.54-.12,3.8a4,4,0,0,0,4,4.2H240a8,8,0,0,0,7.8-6.17A8.33,8.33,0,0,0,246.17,138.89Zm-89,43.18a48,48,0,1,0-58.37,0A72.13,72.13,0,0,0,65.07,212,8,8,0,0,0,72,224H184a8,8,0,0,0,6.93-12A72.15,72.15,0,0,0,157.19,182.07Z"
-                ></path>
-              </svg>
-              <span class="title">Customer</span>
-            </a>
-            <a href="./revenue.html" class="active" aria-current="page">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M160,152a16,16,0,0,1-16,16h-8V136h8A16,16,0,0,1,160,152Zm72-24A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-56,24a32,32,0,0,0-32-32h-8V88h4a16,16,0,0,1,16,16,8,8,0,0,0,16,0,32,32,0,0,0-32-32h-4V64a8,8,0,0,0-16,0v8h-4a32,32,0,0,0,0,64h4v32h-8a16,16,0,0,1-16-16,8,8,0,0,0-16,0,32,32,0,0,0,32,32h8v8a8,8,0,0,0,16,0v-8h8A32,32,0,0,0,176,152Zm-76-48a16,16,0,0,0,16,16h4V88h-4A16,16,0,0,0,100,104Z"
-                ></path>
-              </svg>
-              <span class="title">Revenue</span>
-            </a>
-            <a href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M208,32H184V24a8,8,0,0,0-16,0v8H136V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48a8,8,0,0,0-8,8V200a32,32,0,0,0,32,32H184a32,32,0,0,0,32-32V40A8,8,0,0,0,208,32ZM120,56a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0ZM80,72a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0v8A8,8,0,0,1,80,72Zm80,96H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm24-72a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0Z"
-                ></path>
-              </svg>
-              <span class="title">Pricelist</span>
-            </a>
-          </nav>
-        </div>
-      </main>
-
-      <section class="metrics">
-        <div class="main-content">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-              class="svg svg-home"
-              aria-hidden="true"
-            >
-              <path
-                d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z"
-              ></path>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-              aria-hidden="true"
-            >
-              <path
-                d="M228,128a12,12,0,0,1-6.86,10.84l-152,72a12,12,0,0,1-10.27-21.69L188,128,58.87,66.85A12,12,0,0,1,69.14,45.16l152,72A12,12,0,0,1,228,128Z"
-              ></path>
-            </svg>
+            </div>
             <span>Dashboard</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-              aria-hidden="true"
-            >
-              <path
-                d="M228,128a12,12,0,0,1-6.86,10.84l-152,72a12,12,0,0,1-10.27-21.69L188,128,58.87,66.85A12,12,0,0,1,69.14,45.16l152,72A12,12,0,0,1,228,128Z"
-              ></path>
-            </svg>
-            <span><strong>Revenue</strong></span>
+            <div class="icon-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M228,128a12,12,0,0,1-6.86,10.84l-152,72a12,12,0,0,1-10.27-21.69L188,128,58.87,66.85A12,12,0,0,1,69.14,45.16l152,72A12,12,0,0,1,228,128Z"
+                ></path>
+              </svg>
+            </div>
+            <span class="text-overview">Revenue</span>
           </nav>
 
           <div class="date">
             <h1>Revenue</h1>
             <div class="group-btn">
               <button type="button" class="btn report">Report</button>
-              <button type="button" class="btn date-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM84,184a12,12,0,1,1,12-12A12,12,0,0,1,84,184Zm44,0a12,12,0,1,1,12-12A12,12,0,0,1,128,184Zm0-40a12,12,0,1,1,12-12A12,12,0,0,1,128,144Zm44,40a12,12,0,1,1,12-12A12,12,0,0,1,172,184Zm0-40a12,12,0,1,1,12-12A12,12,0,0,1,172,144Zm36-64H48V48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24Z"
-                  ></path>
-                </svg>
-                <span>April 25 2026</span>
-              </button>
+              <input
+                class="btn btn-date"
+                type="date"
+                aria-label="Select date"
+              />
             </div>
           </div>
 
           <div class="info-panel">
-            <div class="dropdown-group">
-              <div class="dropdown status">
-                <label for="filter-location">Location</label>
-                <select id="filter-location" class="select-box" name="location">
-                  <option value="">All</option>
-                  <option value="Da Lat">Da Lat</option>
-                  <option value="Ho Chi Minh">Ho Chi Minh</option>
-                  <option value="Nha Trang">Nha Trang</option>
-                </select>
-              </div>
+            <div class="dropdown location">
+              <label for="filter-location">Location</label>
+              <select id="filter-location" class="select-box" name="location">
+                <option value="">All</option>
+                <option value="Da Lat">Da Lat</option>
+                <option value="Ho Chi Minh">Ho Chi Minh</option>
+                <option value="Nha Trang">Nha Trang</option>
+              </select>
             </div>
 
             <div class="search-box">
@@ -290,7 +279,7 @@
           >
             <div class="modal">
               <h2 id="modal-title" class="modal-title">Add Revenue</h2>
-              <form class="modal-content" id="revenue-form" novalidate>
+              <form class="modal-content" id="revenue-form">
                 <div class="row-1">
                   <div class="cus">
                     <label for="modal-revenue">Product</label>
@@ -335,7 +324,12 @@
                 </div>
               </form>
               <div class="modal-actions">
-                <button type="button" class="btn save-btn" id="save-revenue">
+                <button
+                  type="submit"
+                  class="btn save-btn"
+                  id="save-revenue"
+                  form="revenue-form"
+                >
                   Save and Close
                 </button>
                 <button
@@ -351,47 +345,11 @@
 
           <div class="total">
             <span>Total:</span>
-            <span>5,950,000 VND</span>
+            <span id="revenue-total">0 VND</span>
           </div>
         </div>
       </section>
     </div>
     <script src="../js/revenue.js"></script>
-    <script>
-      (function () {
-        var overlay = document.getElementById("revenue-modal");
-        var openBtn = document.getElementById("open-revenue-modal");
-        var saveBtn = document.getElementById("save-revenue");
-        var cancelBtn = document.getElementById("cancel-revenue");
-        var form = document.getElementById("revenue-form");
-
-        function openModal() {
-          overlay.classList.remove("hidden");
-          overlay.removeAttribute("hidden");
-          document.getElementById("modal-revenue").focus();
-        }
-
-        function closeModal() {
-          overlay.classList.add("hidden");
-          overlay.setAttribute("hidden", "");
-          form.reset();
-          openBtn.focus();
-        }
-
-        openBtn.addEventListener("click", openModal);
-        cancelBtn.addEventListener("click", closeModal);
-        saveBtn.addEventListener("click", closeModal);
-        overlay.addEventListener("click", function (event) {
-          if (event.target === overlay) {
-            closeModal();
-          }
-        });
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && !overlay.classList.contains("hidden")) {
-            closeModal();
-          }
-        });
-      })();
-    </script>
   </body>
 </html>

@@ -420,16 +420,22 @@ h3 {
 }
 
 .metrics .modal .row-1,
-.metrics .modal .row-2 {
+.metrics .modal .row-2,
+.metrics .modal .row-3,
+.metrics .modal .row-4 {
   display: flex;
   gap: 16px;
+  justify-content: space-between;
 }
 
 .metrics .modal .cus,
 .metrics .modal .address,
 .metrics .modal .phone,
 .metrics .modal .product,
-.metrics .modal .quantity-field {
+.metrics .modal .quantity-field,
+.metrics .modal .volume,
+.metrics .modal .type,
+.metrics .modal .price-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -475,6 +481,27 @@ h3 {
 .metrics .cancel-btn {
   background-color: transparent;
   color: var(--root-neutral-950);
+}
+.volume,
+.type,
+.status-field,
+.location-field,
+.payment-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#edit-type,
+#edit-status,
+#edit-location,
+#edit-payment {
+  padding: 10px 12px;
+  border: 1px solid var(--root-neutral-400);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1.4rem;
+  background-color: #fff;
 }
 
 @media (max-width: 1024px) {

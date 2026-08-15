@@ -75,10 +75,7 @@
         <div class="container-dashboard">
           <h3>Dashboard</h3>
           <nav class="nav-dashboard" aria-label="Dashboard navigation">
-            <a
-              href="../page/dashboard.html"
-              class="the overview"
-            >
+            <a href="../page/dashboard.html" class="the overview">
               <div class="icon-dashboard">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +376,145 @@
               </div>
             </div>
           </div>
+          <!-- Edit Customer Modal -->
+          <div
+            class="modal-overlay hidden"
+            id="customer-edit-modal"
+            hidden
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="customer-edit-title"
+          >
+            <div class="modal">
+              <h2 id="customer-edit-title" class="modal-title">
+                Edit Customer
+              </h2>
 
+              <form class="modal-content" id="customer-edit-form">
+                <!-- Customer -->
+                <div class="row-1">
+                  <div class="cus">
+                    <label for="edit-customer">Customer</label>
+                    <input
+                      id="edit-customer"
+                      type="text"
+                      name="customer"
+                      placeholder="Customer"
+                      required
+                    />
+                  </div>
+
+                  <!-- Product -->
+                  <div class="product">
+                    <label for="edit-product">Product</label>
+                    <input
+                      id="edit-product"
+                      type="text"
+                      name="product"
+                      placeholder="Product"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Volume + Type -->
+                <div class="row-2">
+                  <div class="volume">
+                    <label for="edit-volume">Volume</label>
+                    <input
+                      id="edit-volume"
+                      type="text"
+                      name="volume"
+                      placeholder="Volume"
+                    />
+                  </div>
+
+                  <div class="type">
+                    <label for="edit-type">Type</label>
+                    <select id="edit-type" name="type">
+                      <option value="Red">Red</option>
+                      <option value="White">White</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Quantity + Price -->
+                <div class="row-3">
+                  <div class="quantity-field">
+                    <label for="edit-quantity">Quantity</label>
+                    <input
+                      id="edit-quantity"
+                      type="number"
+                      name="quantity"
+                      min="1"
+                      placeholder="Quantity"
+                      required
+                    />
+                  </div>
+                  <div class="price-field">
+                    <label for="edit-price">Price / Unit</label>
+                    <input
+                      id="edit-price"
+                      type="number"
+                      name="price"
+                      min="0"
+                      placeholder="Price"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Status + Payment -->
+                <div class="row-4">
+                  <div class="status-field">
+                    <label for="edit-status">Status</label>
+                    <select id="edit-status" name="status">
+                      <option value="Not yet">Not yet</option>
+                      <option value="Paid a half">Paid a half</option>
+                      <option value="Paid">Paid</option>
+                    </select>
+                  </div>
+
+                  <div class="payment-field">
+                    <label for="edit-payment">Payment</label>
+                    <select id="edit-payment" name="payment">
+                      <option value="Cash">Cash</option>
+                      <option value="Bank">Bank</option>
+                    </select>
+                  </div>
+
+                  <div class="location-field">
+                    <label for="edit-location">Location</label>
+                    <select id="edit-location" name="location">
+                      <option value="Ho chi minh">Ho chi minh</option>
+                      <option value="Hanoi">Hanoi</option>
+                      <option value="Nha Trang">Nha Trang</option>
+                      <option value="Hoi An">Hoi An</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+
+              <div class="modal-actions">
+                <button
+                  type="submit"
+                  form="customer-edit-form"
+                  class="btn save-btn"
+                  id="save-edit-customer"
+                >
+                  Save Changes
+                </button>
+
+                <button
+                  type="button"
+                  class="btn cancel-btn"
+                  id="cancel-edit-customer"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
           <div class="total">
             <span>Total:</span>
             <span id="customer-total">0 VND</span>
